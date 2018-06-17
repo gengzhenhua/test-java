@@ -16,6 +16,10 @@ import java.util.function.*;
  *
  *     3. 类名 :: 实例方法名
  *
+ * 注意：
+ * 	 ①方法引用所引用的方法的参数列表与返回值类型，需要与函数式接口中抽象方法的参数列表和返回值类型保持一致！
+ * 	 ②若Lambda 的参数列表的第一个参数，是实例方法的调用者，第二个参数(或无参)是实例方法的参数时，格式： ClassName::MethodName
+ *
  * </pre>
  */
 public class MethodRefTest {
