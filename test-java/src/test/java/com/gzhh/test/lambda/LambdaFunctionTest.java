@@ -3,6 +3,8 @@ package com.gzhh.test.lambda;
 import org.junit.Test;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
@@ -40,5 +42,28 @@ public class LambdaFunctionTest {
         return supplier.get();
     }
 
+    @Test
+    public void testFunction(){
+
+        String result = apply("srcParam", (x) -> x.substring(0, 3));
+        System.out.println(result);
+    }
+
+    private String apply(String param, Function<String, String> function){
+
+        return function.apply(param);
+    }
+
+    @Test
+    public void testPredicate(){
+
+        boolean result = test("default", x -> x != null);
+        System.out.println(result);
+    }
+
+    private boolean test(String param, Predicate<String> predicate){
+
+        return predicate.test(param);
+    }
 
 }
