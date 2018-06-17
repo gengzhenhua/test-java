@@ -19,6 +19,9 @@ import java.util.function.Supplier;
  */
 public class LambdaFunctionTest {
 
+    /**
+     * 1. 消费型接口 Consumer<T> void accept(T t)
+     */
     @Test
     public void testConsumer(){
 
@@ -30,6 +33,9 @@ public class LambdaFunctionTest {
         consumer.accept(str);
     }
 
+    /**
+     * 2. 供给型接口 Supplier<T> T get()
+     */
     @Test
     public void testSupplier(){
 
@@ -42,6 +48,9 @@ public class LambdaFunctionTest {
         return supplier.get();
     }
 
+    /**
+     * 3. 函数型接口 Function<T, R>  R apply(T t)
+     */
     @Test
     public void testFunction(){
 
@@ -54,6 +63,9 @@ public class LambdaFunctionTest {
         return function.apply(param);
     }
 
+    /**
+     * 4. 断言型接口 Predicate<T> boolean test(T t)
+     */
     @Test
     public void testPredicate(){
 
